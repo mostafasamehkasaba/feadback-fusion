@@ -11,12 +11,21 @@ export default function Home() {
         {/* hero section */}
         <GradientHeader title="Share The Future of our product">
           <div className="flex gap-4 justify-center pt-4">
-         <Link href="/roadmap">
+         <Link href="/roodmap">
   <Button
     size="lg"
     className="bg-white text-black hover:bg-gray-100"
   >
     View Roadmap
+    <Map className="ml-2 h-4 w-4" />
+  </Button>
+</Link>
+ <Link href="/feedback">
+  <Button
+    size="lg"
+    className="bg-white text-black hover:bg-gray-100"
+  >
+    Submit Feadback
     <Map className="ml-2 h-4 w-4" />
   </Button>
 </Link>
@@ -84,7 +93,22 @@ export default function Home() {
   </div>
 </section>
 
-        
+        <section className="text-center">
+          <div className="inline-grid grid-cols-3 gap-8 ">
+              <div>
+                <div className="text-3xl font-bold">1,234</div>
+                <div className="text-muted-foreground">Suggestions</div>
+              </div>
+               <div>
+                <div className="text-3xl font-bold">8,558</div>
+                <div className="text-muted-foreground">Votes Cast</div>
+              </div>
+               <div>
+                <div className="text-3xl font-bold">234+</div>
+                <div className="text-muted-foreground">Feature</div>
+              </div>
+          </div>
+        </section>
     </div>
   );
 }

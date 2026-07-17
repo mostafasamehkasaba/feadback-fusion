@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "next-themes";
+import { syncUser } from "@/lib/user";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,11 +25,12 @@ export const metadata: Metadata = {
   description: "A platform for users to suggest and vote on features",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  await syncUser()
   return (
     <ClerkProvider>
       <html

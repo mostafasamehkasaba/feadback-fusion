@@ -4,6 +4,7 @@ import React from "react";
 import ThemeToggle from "./ui/themeTooglg";
 import {
   SignInButton,
+  UserButton,
 } from "@clerk/nextjs";
 
 import { Button } from "@/components/ui/button";
@@ -39,11 +40,12 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-4 cursor-pointer">
           <ThemeToggle />
-          <SignInButton>
-            <Button>
-              <Link href="/sign-in"></Link>
-              Sign In</Button>
-          </SignInButton>
+          <Link href="/sign-in">
+  <Button>Sign In</Button>
+</Link>
+
+              <UserButton/>
+
         </div>
       </div>
     </nav>

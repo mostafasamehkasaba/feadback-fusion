@@ -7,7 +7,7 @@ export default function Page() {
    return (
     <div className='flex min-h-screen justify-center'>
       <SignIn 
-       appearance={{baseTheme: theme === 'dark' ? dark : undefined }}
+       appearance={{theme: theme === 'dark' ? dark : undefined }}
        />
     </div>
    )
